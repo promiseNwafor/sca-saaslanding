@@ -261,6 +261,7 @@ footer{
     background: rgb(232, 222, 248);
     width: 100%;
     padding: 5rem;
+    padding-bottom: 0;
 }
 
 footer .p1{
@@ -278,20 +279,32 @@ footer .footer{
 }
   
 footer .footer .box1{
-    width: 150px;
+    width: 60px;
+    padding: 3rem 3rem 0 1rem;
+    align-self: flex-end;
 }
   
 footer .footer .box2{
     width: 800px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 1rem;
 }
   
 footer .footer .box2 div{
-    width: 200px;
+    width: 220px;
+    height: 130px;
     background: rgb(243, 241, 245);
     margin: 0.5rem;
     padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px 1px rgba(110, 103, 103, 0.2); 
+}
+  
+footer .footer .box2 div i{
+    font-size: 30px;
+    color: rgb(62, 6, 99);
 }
   
