@@ -47,11 +47,26 @@ nav {
     top: 0;
     padding: 1.3rem 5rem;
     z-index: 1;
-    /* box-shadow: 0 5px 15px 1px rgba(110, 103, 103, 0.2); */
 }
 
 nav .hamburger {
     display: none;
+    cursor: pointer;
+}
+
+.menu{
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    color: rgb(233, 222, 222);
+    background: rgba(20, 20, 20, 0.9);
+}
+
+ul.menu li{
+    margin-top: 3rem;
 }
 
 nav ul {
@@ -60,12 +75,16 @@ nav ul {
     align-items: center; 
 }
 
+nav .fa-window-close-o {
+    display: none;
+}
+
 nav img {
     width: 100px;
 }
 
 .active {
-    color: var(--Primary-Light); 
+    opacity: 0.7;
 }
 
 nav li:hover {
@@ -88,7 +107,7 @@ header .header{
 }
 
 header .header-info{
-    width: 50%;
+    max-width: 600px;
 }
 
 header .header-info span{
@@ -177,6 +196,10 @@ i{
     margin-right: 1rem;
     padding-bottom: 1rem;
     color: inherit;
+}
+
+.fa{
+    font-size: 20px;
 }
   
 #section1{
@@ -307,4 +330,44 @@ footer .footer .box2 div i{
     font-size: 30px;
     color: rgb(62, 6, 99);
 }
-  
+
+@media screen and (max-width: 500px){
+    nav ul, nav .nav-icons{
+        display: none; 
+    }
+    nav .hamburger{
+        display: block;
+    }
+    header .header-graphics img{
+        width: 100px;
+        padding: 1rem;
+        margin-right: 1rem;
+    }
+    #section1 .box-wrap .box2{
+        padding-left: 0;
+    }
+    #section2 .p1{
+        width: 100%;
+    }
+    footer .footer{
+        flex-direction: column-reverse;
+    }
+    footer .p1{
+        width: 100%;
+    }
+    footer .footer .box2{
+        width: 400px;
+        padding-right: 8rem;
+        padding-left: 0;
+    }
+    footer .footer .box2 div{
+        justify-self: flex-start;
+        width: 120px;
+    }
+    footer .footer .box1{
+        align-self: flex-start;
+    }
+    footer .footer .box1 img{
+        width: 300px;
+    }
+}

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" media="screen and (max-width: 480px)" href="mobile.css">
     <title>SCA | Saasland</title>
 </head>
 
@@ -17,15 +16,19 @@
         </div>
         <ul id="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a class="active" href="#">Security</a></li>
-            <li><a href="#">Integrations</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="index.html">Product</a></li>
+            <li><a href="index.html">Pricing</a></li>
+            <li><a class="active" href="index.html">Security</a></li>
+            <li><a href="index.html">Integrations</a></li>
+            <li><a href="index.html">Contact Us</a></li>
         </ul>
         <div class="nav-icons">
             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
             <a href="#"><i class="fa fa-bath" aria-hidden="true"></i></a>
+        </div>
+        <div class="hamburger">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            <i class="fa fa-window-close-o" aria-hidden="true"></i>
         </div>
     </nav>
 
@@ -137,5 +140,21 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const hamburger = document.querySelector(".fa-bars");
+        const close = document.querySelector(".fa-window-close-o");
+        const ul = document.querySelector("#nav-links");
+        hamburger.addEventListener('click', () => {
+            ul.classList.add("menu");
+            hamburger.style.display = "none";
+            close.style.display = "block";
+        })
+        close.addEventListener('click', () => {
+            ul.classList.remove("menu");
+            hamburger.style.display = "block";
+            close.style.display = "none";
+        })
+    </script>
 </body>
 </html>
